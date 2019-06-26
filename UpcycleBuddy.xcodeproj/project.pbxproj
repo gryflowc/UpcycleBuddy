@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,6 +12,11 @@
 		1ADC897922C3994900BA5F20 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1ADC897722C3994900BA5F20 /* Main.storyboard */; };
 		1ADC897B22C3994900BA5F20 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1ADC897A22C3994900BA5F20 /* Assets.xcassets */; };
 		1ADC897E22C3994900BA5F20 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1ADC897C22C3994900BA5F20 /* LaunchScreen.storyboard */; };
+		1AF7317D22C39B2900A72FA3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1AF7317C22C39B2900A72FA3 /* GoogleService-Info.plist */; };
+		1AF7317F22C3A18100A72FA3 /* DetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF7317E22C3A18100A72FA3 /* DetailTableViewController.swift */; };
+		1AF7318122C3C15700A72FA3 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF7318022C3C15700A72FA3 /* Item.swift */; };
+		1AF7318322C3C99000A72FA3 /* Items.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF7318222C3C99000A72FA3 /* Items.swift */; };
+		9E98656E9A4764762D5C1FB5 /* Pods_UpcycleBuddy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A9D0E1B221D48AA178D3B94 /* Pods_UpcycleBuddy.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +27,13 @@
 		1ADC897A22C3994900BA5F20 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1ADC897D22C3994900BA5F20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1ADC897F22C3994900BA5F20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1AF7317C22C39B2900A72FA3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		1AF7317E22C3A18100A72FA3 /* DetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewController.swift; sourceTree = "<group>"; };
+		1AF7318022C3C15700A72FA3 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		1AF7318222C3C99000A72FA3 /* Items.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Items.swift; sourceTree = "<group>"; };
+		2550BBE032687041F03FD1C7 /* Pods-UpcycleBuddy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UpcycleBuddy.release.xcconfig"; path = "Target Support Files/Pods-UpcycleBuddy/Pods-UpcycleBuddy.release.xcconfig"; sourceTree = "<group>"; };
+		4A9D0E1B221D48AA178D3B94 /* Pods_UpcycleBuddy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UpcycleBuddy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A293F1C67AAC03E0D0FC5F2E /* Pods-UpcycleBuddy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UpcycleBuddy.debug.xcconfig"; path = "Target Support Files/Pods-UpcycleBuddy/Pods-UpcycleBuddy.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E98656E9A4764762D5C1FB5 /* Pods_UpcycleBuddy.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +53,8 @@
 			children = (
 				1ADC897222C3994900BA5F20 /* UpcycleBuddy */,
 				1ADC897122C3994900BA5F20 /* Products */,
+				D0F1BA42572F12FD35E89921 /* Pods */,
+				E7702A91052AF8D9FBEEE6FE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,13 +70,34 @@
 			isa = PBXGroup;
 			children = (
 				1ADC897322C3994900BA5F20 /* AppDelegate.swift */,
+				1AF7318022C3C15700A72FA3 /* Item.swift */,
+				1AF7318222C3C99000A72FA3 /* Items.swift */,
 				1ADC897522C3994900BA5F20 /* ViewController.swift */,
+				1AF7317E22C3A18100A72FA3 /* DetailTableViewController.swift */,
 				1ADC897722C3994900BA5F20 /* Main.storyboard */,
 				1ADC897A22C3994900BA5F20 /* Assets.xcassets */,
 				1ADC897C22C3994900BA5F20 /* LaunchScreen.storyboard */,
 				1ADC897F22C3994900BA5F20 /* Info.plist */,
+				1AF7317C22C39B2900A72FA3 /* GoogleService-Info.plist */,
 			);
 			path = UpcycleBuddy;
+			sourceTree = "<group>";
+		};
+		D0F1BA42572F12FD35E89921 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A293F1C67AAC03E0D0FC5F2E /* Pods-UpcycleBuddy.debug.xcconfig */,
+				2550BBE032687041F03FD1C7 /* Pods-UpcycleBuddy.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		E7702A91052AF8D9FBEEE6FE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4A9D0E1B221D48AA178D3B94 /* Pods_UpcycleBuddy.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +107,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1ADC898222C3994900BA5F20 /* Build configuration list for PBXNativeTarget "UpcycleBuddy" */;
 			buildPhases = (
+				48996BD4758A6BD4861677D2 /* [CP] Check Pods Manifest.lock */,
 				1ADC896C22C3994900BA5F20 /* Sources */,
 				1ADC896D22C3994900BA5F20 /* Frameworks */,
 				1ADC896E22C3994900BA5F20 /* Resources */,
+				C55D6CD1719A7560EC35BFC8 /* [CP] Embed Pods Frameworks */,
+				03DFFC24F3A3214B1D20D6D7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -123,6 +162,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1ADC897E22C3994900BA5F20 /* LaunchScreen.storyboard in Resources */,
+				1AF7317D22C39B2900A72FA3 /* GoogleService-Info.plist in Resources */,
 				1ADC897B22C3994900BA5F20 /* Assets.xcassets in Resources */,
 				1ADC897922C3994900BA5F20 /* Main.storyboard in Resources */,
 			);
@@ -130,11 +170,73 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		03DFFC24F3A3214B1D20D6D7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-UpcycleBuddy/Pods-UpcycleBuddy-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-UpcycleBuddy/Pods-UpcycleBuddy-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-UpcycleBuddy/Pods-UpcycleBuddy-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		48996BD4758A6BD4861677D2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-UpcycleBuddy-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C55D6CD1719A7560EC35BFC8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-UpcycleBuddy/Pods-UpcycleBuddy-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-UpcycleBuddy/Pods-UpcycleBuddy-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-UpcycleBuddy/Pods-UpcycleBuddy-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1ADC896C22C3994900BA5F20 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AF7318122C3C15700A72FA3 /* Item.swift in Sources */,
+				1AF7318322C3C99000A72FA3 /* Items.swift in Sources */,
+				1AF7317F22C3A18100A72FA3 /* DetailTableViewController.swift in Sources */,
 				1ADC897622C3994900BA5F20 /* ViewController.swift in Sources */,
 				1ADC897422C3994900BA5F20 /* AppDelegate.swift in Sources */,
 			);
@@ -280,6 +382,7 @@
 		};
 		1ADC898322C3994900BA5F20 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A293F1C67AAC03E0D0FC5F2E /* Pods-UpcycleBuddy.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,6 +401,7 @@
 		};
 		1ADC898422C3994900BA5F20 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2550BBE032687041F03FD1C7 /* Pods-UpcycleBuddy.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
