@@ -83,7 +83,7 @@ class Item: NSObject, MKAnnotation {
         let dataToSave: [String: Any] = self.dictionary
         // if we HAVE saved a record, we'll have an ID
         if self.documentID != "" {
-            let ref = db.collection("teams").document(self.documentID)
+            let ref = db.collection("items").document(self.documentID)
             ref.setData(dataToSave) { (error) in
                 if let error = error {
                     print("ERROR: updating document \(error.localizedDescription)")
@@ -94,7 +94,7 @@ class Item: NSObject, MKAnnotation {
             }
         } else { // Otherwise create a new document via .addDocument
             var ref: DocumentReference? = nil // Firestore will create a new ID for us
-            ref = db.collection("teams").addDocument(data: dataToSave) { (error) in
+            ref = db.collection("items").addDocument(data: dataToSave) { (error) in
                 if let error = error {
                     print("ERROR: adding document \(error.localizedDescription)")
                     completion(false)

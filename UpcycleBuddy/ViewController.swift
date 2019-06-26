@@ -31,17 +31,18 @@ class ViewController: UIViewController {
     }
     
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        signIn()
-    }
-    
     
     override func viewWillAppear(_ animated: Bool) {
         items.loadData {
             self.tableView.reloadData()
         }
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        signIn()
+    }
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ShowItem" {
@@ -75,10 +76,6 @@ class ViewController: UIViewController {
         alertController.addAction(alertAction)
         present(alertController, animated: true, completion: nil)
     }
-    
-    
-    
-    
     
     @IBAction func signOutPressed(_ sender: UIBarButtonItem) {
         do {
