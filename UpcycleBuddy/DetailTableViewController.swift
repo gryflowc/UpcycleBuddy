@@ -10,8 +10,9 @@ import UIKit
 import GooglePlaces
 import MapKit
 import Firebase
+import MessageUI
 
-class DetailTableViewController: UITableViewController {
+class DetailTableViewController: UITableViewController, MFMailComposeViewControllerDelegate {
     
     @IBOutlet weak var cancelBarButton: UIBarButtonItem!
     @IBOutlet weak var saveBarButton: UIBarButtonItem!
@@ -101,11 +102,35 @@ class DetailTableViewController: UITableViewController {
         present(alertController, animated: true, completion: nil)
     }
     
+    func configuredMailComposeViewController() -> MFMailComposeViewController {
+        let mailComposerVC = MFMailComposeViewController()
+        mailComposerVC.mailComposeDelegate = self
+        mailComposerVC.setToRecipients([emailTextView.text])
+        mailComposerVC.setSubject("")
+        mailComposerVC.setMessageBody("This is the message body", isHTML: false)
+        return mailComposerVC
+        
+    }
     
+    func showSendMailErrorAlert() {
+        let sendMailErrorAlert = UIAlertView(title: "Could not send email", message: "Your device must have an active mail account.", delegate: self, cancelButtonTitle: "Ok")
+        sendMailErrorAlert.show()
+        
+    }
+    
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        controller.dismiss(animated: true, completion: nil)
+    }
     
     //MARK:- Actions:
     
     @IBAction func sendButtonPressed(_ sender: UIButton) {
+        let mailComposeViewController = configuredMailComposeViewController()
+        if MFMailComposeViewController.canSendMail() {
+            self.present(mailComposeViewController, animated: true, completion: nil)
+        } else {
+            self.showSendMailErrorAlert()
+        }
     }
     
     
