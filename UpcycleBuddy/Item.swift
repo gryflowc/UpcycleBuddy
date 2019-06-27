@@ -136,7 +136,7 @@ class Item: NSObject, MKAnnotation {
             // Create the dictionary representing the data we want to save
             let dataToSave = self.dictionary
             // This will either create a new doc at documentUUID or update the existing doc with that name
-            let ref = db.collection("teams").document(self.documentID)
+            let ref = db.collection("items").document(self.documentID)
             ref.setData(dataToSave) { (error) in
                 if let error = error {
                     print("*** ERROR: updating document \(self.appImageUUID) in spot \(self.documentID) \(error.localizedDescription)")
@@ -172,6 +172,5 @@ class Item: NSObject, MKAnnotation {
             }
         }
     }
-    
     
 }

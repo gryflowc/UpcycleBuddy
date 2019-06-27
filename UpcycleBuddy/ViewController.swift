@@ -14,6 +14,7 @@ import GoogleSignIn
 
 
 class ViewController: UIViewController {
+    
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var addBarButton: UIBarButtonItem!
     
@@ -29,6 +30,7 @@ class ViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.isHidden = true
+        
     }
     
     

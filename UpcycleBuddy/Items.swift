@@ -21,7 +21,7 @@ class Items {
         db.collection("items").addSnapshotListener { (querySnapshot, error) in
             guard error == nil else {
                 print("*** ERROR: adding the snapshot listener \(error!.localizedDescription)")
-                    return completed()
+                return completed()
             }
             self.itemArray = []
             // there are querySnapshot!.documents.count documents in the snapshot
