@@ -15,8 +15,11 @@ class DetailTableViewController: UITableViewController {
     
     @IBOutlet weak var cancelBarButton: UIBarButtonItem!
     @IBOutlet weak var saveBarButton: UIBarButtonItem!
-    @IBOutlet weak var itemNameField: UITextField!
+    @IBOutlet weak var sendButton: UIButton!
+    
+    @IBOutlet weak var itemTextView: UITextView!
     @IBOutlet weak var addressTextView: UITextView!
+    @IBOutlet weak var emailTextView: UITextView!
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var appImageView: UIImageView!
     
@@ -44,9 +47,13 @@ class DetailTableViewController: UITableViewController {
         updateUserInterfaace()
     }
     
+    
+    
+    //MARK:- functions:
     func updateUserInterfaace() {
-        itemNameField.text = item.itemName
+        itemTextView.text = item.itemName
         addressTextView.text = item.location
+        emailTextView.text = item.email
         updateMap()
     }
     
@@ -57,8 +64,9 @@ class DetailTableViewController: UITableViewController {
     }
     
     func updateDataFromInterface() {
-        item.itemName = itemNameField.text!
+        item.itemName = itemTextView.text!
         item.location =  addressTextView.text!
+        item.email = emailTextView.text!
     }
     
     
@@ -92,6 +100,15 @@ class DetailTableViewController: UITableViewController {
         alertController.addAction(cancelAction)
         present(alertController, animated: true, completion: nil)
     }
+    
+    
+    
+    //MARK:- Actions:
+    
+    @IBAction func sendButtonPressed(_ sender: UIButton) {
+    }
+    
+    
     
     @IBAction func findLocationButtonPressed(_ sender: UIBarButtonItem) {
         let autocompleteController = GMSAutocompleteViewController()

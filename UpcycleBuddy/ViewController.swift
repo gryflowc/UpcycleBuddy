@@ -15,6 +15,7 @@ import GoogleSignIn
 
 class ViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var addBarButton: UIBarButtonItem!
     
     var items: Items!
     var authUI: FUIAuth!

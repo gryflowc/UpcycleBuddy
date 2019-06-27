@@ -14,6 +14,7 @@ import MapKit
 class Item: NSObject, MKAnnotation {
     var itemName: String
     var location: String
+    var email: String
     var coordinate: CLLocationCoordinate2D
     var appImage: UIImage
     var appImageUUID: String
@@ -30,7 +31,7 @@ class Item: NSObject, MKAnnotation {
     
     var dictionary: [String: Any] {
         let timeIntervalDate = createdOn.timeIntervalSince1970
-        return ["itemName": itemName, "location": location, "longitude": longitude, "latitude": latitude, "appImageUUID": appImageUUID, "createdOn": timeIntervalDate, "postingUserID": postingUserID]
+        return ["itemName": itemName, "location": location, "email": email, "longitude": longitude, "latitude": latitude, "appImageUUID": appImageUUID, "createdOn": timeIntervalDate, "postingUserID": postingUserID]
     }
     
     
@@ -42,9 +43,10 @@ class Item: NSObject, MKAnnotation {
         return location
     }
     
-    init(itemName: String, location: String, coordinate: CLLocationCoordinate2D, appImage: UIImage, appImageUUID: String, createdOn: Date, postingUserID: String, documentID: String) {
+    init(itemName: String, location: String, email: String, coordinate: CLLocationCoordinate2D, appImage: UIImage, appImageUUID: String, createdOn: Date, postingUserID: String, documentID: String) {
         self.itemName = itemName
         self.location = location
+        self.email = email
         self.coordinate = coordinate
         self.appImage = appImage
         self.appImageUUID = appImageUUID
@@ -54,12 +56,13 @@ class Item: NSObject, MKAnnotation {
     }
     
     convenience override init() {
-        self.init(itemName: "", location: "", coordinate: CLLocationCoordinate2D(), appImage: UIImage(), appImageUUID: "", createdOn: Date(), postingUserID: "", documentID: "")
+        self.init(itemName: "", location: "", email: "", coordinate: CLLocationCoordinate2D(), appImage: UIImage(), appImageUUID: "", createdOn: Date(), postingUserID: "", documentID: "")
     }
     
     convenience init(dictionary: [String: Any]) {
         let itemName = dictionary["itemName"] as! String? ?? ""
         let location = dictionary["location"] as! String? ?? ""
+        let email = dictionary["email"] as! String? ?? ""
         let latitude = dictionary["latitude"] as! CLLocationDegrees? ?? 0.0
         let longitude = dictionary["longitude"] as! CLLocationDegrees? ?? 0.0
         let coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
@@ -68,7 +71,7 @@ class Item: NSObject, MKAnnotation {
         let timeIntervalDate = dictionary["date"] as! TimeInterval? ?? TimeInterval()
         let createdOn = Date(timeIntervalSince1970: timeIntervalDate)
         let postingUserID = dictionary["postingUserID"] as! String? ?? ""
-        self.init(itemName: itemName, location: location, coordinate: coordinate, appImage: appImage, appImageUUID: appImageUUID, createdOn: createdOn, postingUserID: postingUserID, documentID: "")
+        self.init(itemName: itemName, location: location, email: email, coordinate: coordinate, appImage: appImage, appImageUUID: appImageUUID, createdOn: createdOn, postingUserID: postingUserID, documentID: "")
     }
     
     func saveData(completion: @escaping (Bool) -> () ) {
